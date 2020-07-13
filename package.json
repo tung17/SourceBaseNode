@@ -1,0 +1,42 @@
+{
+  "name": "sourcebasenode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "link-module-alias",
+    "preinstall": "link-module-alias clean || true",
+    "dev": "pm2-dev index.js -- --color",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tung17/SourceBaseNode.git"
+  },
+  "author": "TRINH_THANH_TUNG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tung17/SourceBaseNode/issues"
+  },
+  "homepage": "https://github.com/tung17/SourceBaseNode#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "link-module-alias": "^1.2.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.20",
+    "sendgrid": "^5.2.3"
+  },
+  "_moduleAliases": {
+    "~root": ".",
+    "~models": "./src/models",
+    "~controllers": "./src/controllers",
+    "~routes": "./src/routes",
+    "~constants": "./src/constants",
+    "~middlewares": "./src/middlewares",
+    "~shared": "./src/shared",
+    "`scriptTests": "./src/scriptTest"
+  }
+}
